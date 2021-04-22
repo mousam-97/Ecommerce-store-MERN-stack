@@ -17,7 +17,6 @@ const data = {
   ],
   products: [
     {
-      _id: "1",
       name: "Nike slim shirt",
       category: "shirts",
       image: "/images/p1.jpg",
@@ -29,7 +28,6 @@ const data = {
       description: "High quality products",
     },
     {
-      _id: "2",
       name: "Addidas slim shirt",
       category: "shirts",
       image: "/images/p2.jpg",
@@ -41,7 +39,6 @@ const data = {
       description: "Great T shirt",
     },
     {
-      _id: "3",
       name: "Puma slim shirt",
       category: "shirts",
       image: "/images/p3.jpg",
@@ -53,7 +50,6 @@ const data = {
       description: "Great products",
     },
     {
-      _id: "4",
       name: "Nike Trousers",
       category: "pants",
       image: "/images/p4.jpg",
@@ -65,7 +61,6 @@ const data = {
       description: "High quality products",
     },
     {
-      _id: "5",
       name: "Puma Trousers",
       category: "pants",
       image: "/images/p5.jpg",
@@ -77,7 +72,6 @@ const data = {
       description: "High quality products",
     },
     {
-      _id: "6",
       name: "Ducati Trousers",
       category: "pants",
       image: "/images/p6.jpg",
