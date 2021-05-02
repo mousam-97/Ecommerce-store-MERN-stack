@@ -7,7 +7,7 @@ function OrderSuccessScreen(props) {
   const { userInfo } = userSignin;
 
   return (
-    <div className="card card-body">
+    <div className="card card-body placed_order">
       <p>
         Hey <strong>{userInfo.name}</strong>,
       </p>
@@ -19,10 +19,19 @@ function OrderSuccessScreen(props) {
       <p>
         Thank you for shopping with us. We'd like to let you know that Amazon
         has confirmed your order, and is preparing it for shipment. If you would
-        like view the status of your order or make any changes to it, please
-        visit <Link to="orderhistory">Your Orders</Link> on Amazon.com.
+        like to view the status of your order or make any changes to it, please
+        visit{" "}
+        <strong>
+          <Link to="orderhistory">Your Orders</Link>
+        </strong>{" "}
+        on Amazon.
       </p>
-      <Link to="/">Continue Shopping </Link>
+      <button
+        className="primary block"
+        onClick={(e) => props.history.push("/")}
+      >
+        Continue Shopping
+      </button>
     </div>
   );
 }

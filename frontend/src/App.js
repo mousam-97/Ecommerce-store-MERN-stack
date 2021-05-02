@@ -12,50 +12,84 @@ import ProductScreen from "./screens/ProductScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import ShippingAddressScreen from "./screens/ShippingAddressScreen";
 import SigninScreen from "./screens/SigninScreen";
+import SearchIcon from "@material-ui/icons/Search";
+import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
+import RoomOutlinedIcon from "@material-ui/icons/RoomOutlined";
 
 function App() {
   const cart = useSelector((state) => state.cart);
-  const { cartItems } = cart;
+  const { cartItems, shippingAddress } = cart;
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
   const signoutHandler = () => {
     dispatch(signout());
   };
+
   return (
     <BrowserRouter>
       <div className="grid-container">
-        <header className="row">
-          <div>
-            <Link className="brand" to="/">
-              Amazon
+        <header>
+          <nav className="header">
+            <Link to="/">
+              <img
+                className="header__logo"
+                src="/images/amazonLogo.png"
+                alt="amazon-logo"
+              />
             </Link>
-          </div>
-          <div>
-            <Link to="orderhistory">Returns & Orders</Link>
-            <Link to="/cart">
-              Cart
-              {cartItems.length > 0 && (
-                <span className="badge">{cartItems.length}</span>
-              )}
-            </Link>
-            {userInfo ? (
-              <div className="dropdown">
-                <Link to="#">
-                  {userInfo.name} <i className="fa fa-caret-down"></i>
-                </Link>
-                <ul className="dropdown-content">
-                  <li>
-                    <Link to="#signout" onClick={signoutHandler}>
-                      Sign out
-                    </Link>
-                  </li>
-                </ul>
+
+            <Link to="/shipping" className="header__link">
+              <RoomOutlinedIcon fontSize="large" />
+              <div className="header_option">
+                <span className="header__optionLineOne ">
+                  {userInfo ? `Deliver to ${userInfo.name}` : "Hello "}
+                </span>
+                <span className="header__optionLineTwo">
+                  {shippingAddress.city
+                    ? `${shippingAddress.city} ${shippingAddress.postalCode}`
+                    : "Select your address"}
+                </span>
               </div>
-            ) : (
-              <Link to="/signin">Sign In</Link>
-            )}
-          </div>
+            </Link>
+
+            <div className="header__search">
+              <input type="text" className="header__searchInput" />
+              <SearchIcon fontSize="large" className="header__searchIcon" />
+            </div>
+
+            <div className="header__nav">
+              <Link to={!userInfo && "/signin"} className="header__link">
+                <div onClick={signoutHandler} className="header_option">
+                  <span className="header__optionLineOne">
+                    Hello, {userInfo ? userInfo.name : "Guest"}{" "}
+                  </span>
+                  <span className="header__optionLineTwo">
+                    {userInfo ? "Sign Out" : "Sign In"}
+                  </span>
+                </div>
+              </Link>
+
+              <Link to="/orderhistory" className="header__link">
+                <div className="header_option">
+                  <span className="header__optionLineOne">Returns</span>
+                  <span className="header__optionLineTwo">& Orders</span>
+                </div>
+              </Link>
+
+              <Link to="/cart" className="header__link">
+                <div className="header__optionBasket">
+                  <span className="header__basketCount ">
+                    <span className="badge">{cartItems.length}</span>
+                  </span>
+                  <span className="header__optionLineTwo">
+                    <ShoppingCartOutlinedIcon fontSize="large" />
+                    Cart
+                  </span>
+                </div>
+              </Link>
+            </div>
+          </nav>
         </header>
         <main>
           <Route path="/cart/:id?" component={CartScreen}></Route>

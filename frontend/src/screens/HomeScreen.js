@@ -17,16 +17,21 @@ function HomeScreen() {
   console.log(products);
 
   return (
-    <div>
+    <div className="home">
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <div className="row center">
+          <img
+            className="home__image"
+            src="/images/Amazon_banner.jpg"
+            alt="amazon-prime-banner"
+          />
           {products.map((product) => {
             return (
-              <Product
+              <Product 
                 _id={product._id}
                 key={product._id}
                 image={product.image}
