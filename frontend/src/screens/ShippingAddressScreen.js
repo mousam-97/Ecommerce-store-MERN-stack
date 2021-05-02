@@ -12,7 +12,7 @@ function ShippingAddressScreen(props) {
     props.history.push("/signin");
   }
 
-  const [fullName, setFullName] = useState(shippingAddress.fullName); 
+  const [fullName, setFullName] = useState(shippingAddress.fullName);
   const [address, setAddress] = useState(shippingAddress.address);
   const [city, setCity] = useState(shippingAddress.city);
   const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
@@ -31,9 +31,9 @@ function ShippingAddressScreen(props) {
     <div>
       <CheckoutSteps step1 step2></CheckoutSteps>
       <form className="form" onSubmit={submitHandler}>
-        <h1>Shipping Address</h1>
+        <h1 className="register__title">Shipping Address</h1>
         <div>
-          <label htmlFor="fullName">Full Name</label>
+          <label htmlFor="fullName"><strong>Full Name</strong></label>
           <input
             type="text"
             id="fullName"
@@ -44,7 +44,7 @@ function ShippingAddressScreen(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor="address">Address</label>
+          <label htmlFor="address"><strong>Address</strong></label>
           <input
             type="text"
             id="address"
@@ -55,7 +55,7 @@ function ShippingAddressScreen(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor="city">City</label>
+          <label htmlFor="city"><strong>City</strong></label>
           <input
             type="text"
             id="city"
@@ -66,7 +66,7 @@ function ShippingAddressScreen(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor="postalCode">Postal Code</label>
+          <label htmlFor="postalCode"><strong>Postal Code</strong></label>
           <input
             type="text"
             id="postalCode"
@@ -77,7 +77,7 @@ function ShippingAddressScreen(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor="country">Country</label>
+          <label htmlFor="country"><strong>Country</strong></label>
           <input
             type="text"
             id="country"

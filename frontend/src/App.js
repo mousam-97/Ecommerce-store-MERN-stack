@@ -13,8 +13,8 @@ import RegisterScreen from "./screens/RegisterScreen";
 import ShippingAddressScreen from "./screens/ShippingAddressScreen";
 import SigninScreen from "./screens/SigninScreen";
 import SearchIcon from "@material-ui/icons/Search";
-import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import RoomOutlinedIcon from "@material-ui/icons/RoomOutlined";
+import { HiOutlineShoppingCart } from "react-icons/hi";
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -82,10 +82,12 @@ function App() {
                   <span className="header__basketCount ">
                     <span className="badge">{cartItems.length}</span>
                   </span>
-                  <span className="header__optionLineTwo">
-                    <ShoppingCartOutlinedIcon fontSize="large" />
-                    Cart
+                  <span className="cart__icon">
+                    <HiOutlineShoppingCart size="2.5em" />
                   </span>
+                </div>
+                <div className="header__cart">
+                  Cart
                 </div>
               </Link>
             </div>

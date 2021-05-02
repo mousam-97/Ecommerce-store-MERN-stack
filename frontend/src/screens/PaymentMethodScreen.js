@@ -34,8 +34,15 @@ function PaymentMethodScreen(props) {
               required
               checked
               onChange={(e) => setPaymentMethod(e.target.value)}
+              className="checkmark"
             ></input>
-            <label htmlFor="paypal">PayPal</label>
+            <label htmlFor="paypal">
+              <img
+                className="payment__logo"
+                src="/images/paypal-logo.png"
+                alt="paypal logo"
+              />
+            </label>
           </div>
         </div>
         <div>
@@ -47,8 +54,15 @@ function PaymentMethodScreen(props) {
               name="paymentMethod"
               required
               onChange={(e) => setPaymentMethod(e.target.value)}
+              className="checkmark"
             ></input>
-            <label htmlFor="stripe">Stripe</label>
+            <label htmlFor="stripe">
+              <img
+                className="payment__logo"
+                src="/images/Stripe_logo.png"
+                alt="stripe logo"
+              />
+            </label>
           </div>
         </div>
         <div>
