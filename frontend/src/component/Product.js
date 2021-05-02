@@ -4,11 +4,14 @@ import Rating from "./Rating";
 
 function Product(props) {
   return (
-    <div key={props._id} className="card">
-      <Link to={`/product/${props._id}`}>
-        <img className="medium" src={props.image} alt={props.name} />
-      </Link>
-      <div className="card-body">
+    <div key={props._id} className="product__card">
+      <div className="product__imageContainer">
+        <Link to={`/product/${props._id}`}>
+          <img className="product__image" src={props.image} alt={props.name} />
+        </Link>
+      </div>
+
+      <div className="product__description">  
         <Link to={`/product/${props._id}`}>
           <h2>{props.name}</h2>
         </Link>

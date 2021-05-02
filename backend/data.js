@@ -82,6 +82,28 @@ const data = {
       numReviews: 7,
       description: "Nice products",
     },
+    {
+      name: "Xbox One(1TB)",
+      category: "electronics",
+      image: "/images/xbox.jpg",
+      price:  900,
+      countInStock: 11,
+      brand: "Microsoft",
+      rating: 5,
+      numReviews: 30,
+      description: "The 1TB limited edition console encapsulates the urban decay and vibrant Tech of night city with glowing elements, bright panels, color shift effects, and textures",
+    },
+    {
+      name: "Samsung TV",
+      category: "electronics",
+      image: "/images/samsungtv.jpg",
+      price:  1200,
+      countInStock: 20,
+      brand: "Samsung",
+      rating: 4,
+      numReviews: 25,
+      description: "Resolution: HD Ready (1366x768) | Refresh Rate: 60 hertz. Connectivity: 2 HDMI ports to connect set top box, Blu Ray players, gaming console | 1 USB ports to connect hard drives and other USB devices. Display : LED Panel | Mega Contrast | PurColor | HD Picture Quality | Slim & Stylish Design",
+    },
   ],
 };
 

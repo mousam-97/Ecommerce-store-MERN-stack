@@ -4,6 +4,8 @@ import LoadingBox from "../component/LoadingBox";
 import MessageBox from "../component/MessageBox";
 import { useSelector, useDispatch } from "react-redux";
 import { listProducts } from "../actions/productActions";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import CarouselScreen from "../component/Carousel";
 
 function HomeScreen() {
   const dispatch = useDispatch();
@@ -24,14 +26,12 @@ function HomeScreen() {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <div className="row center">
-          <img
-            className="home__image"
-            src="/images/Amazon_banner.jpg"
-            alt="amazon-prime-banner"
-          />
+          <div className="carousal__banner">
+            <CarouselScreen />
+          </div>
           {products.map((product) => {
             return (
-              <Product 
+              <Product
                 _id={product._id}
                 key={product._id}
                 image={product.image}
