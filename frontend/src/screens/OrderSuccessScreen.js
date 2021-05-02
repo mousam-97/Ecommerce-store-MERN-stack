@@ -17,7 +17,7 @@ function OrderSuccessScreen(props) {
       </h1>
       <label />
       <p>
-        Thank you for shopping with us. We'd like to let you know that Amazon
+        Thank you for shopping with us. We'd like to let you know that Fake Amazon Clone
         has confirmed your order, and is preparing it for shipment. If you would
         like to view the status of your order or make any changes to it, please
         visit{" "}

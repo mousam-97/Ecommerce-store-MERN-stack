@@ -276,7 +276,7 @@ img {
 }
 
 img.small {
-  max-width: 5rem;
+  max-width: 10rem;
   width: 100%;
 }
 
@@ -307,6 +307,24 @@ img.large {
   margin-bottom: 0.5rem;
 }
 
+.subtotal__gift {
+  display: flex;
+  align-items: center;
+}
+
+.cart__banner {
+  max-width: 1100px;
+}
+
+.cart__screen {
+  padding: 10px;
+}
+
+.cart__header {
+  font-size: 30px;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
 .price {
   font-size: 2rem;
 }
@@ -379,7 +397,6 @@ img.large {
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
-
 }
 
 .login__logo {
@@ -497,4 +514,3 @@ table {
   background-color: #eee;
   border-radius: 50%;
 }
-
