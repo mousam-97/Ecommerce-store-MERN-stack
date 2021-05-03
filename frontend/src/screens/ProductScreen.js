@@ -28,7 +28,7 @@ function ProductScreen(props) {
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <div>
+        <div className="page">
           <Link to="/">
             <strong>Back to results</strong>
           </Link>

@@ -57,7 +57,7 @@ function App() {
               <input type="text" className="header__searchInput" />
               <SearchIcon fontSize="large" className="header__searchIcon" />
             </div>
-
+                    
             <div className="header__nav">
               <Link to={!userInfo && "/signin"} className="header__link">
                 <div onClick={signoutHandler} className="header_option">

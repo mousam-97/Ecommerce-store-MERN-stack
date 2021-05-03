@@ -28,7 +28,7 @@ function ShippingAddressScreen(props) {
     props.history.push("/payment");
   };
   return (
-    <div>
+    <div className="page">
       <CheckoutSteps step1 step2></CheckoutSteps>
       <form className="form" onSubmit={submitHandler}>
         <h1 className="register__title">Shipping Address</h1>

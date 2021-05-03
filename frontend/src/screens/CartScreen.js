@@ -28,7 +28,7 @@ function CartScreen(props) {
   };
 
   return (
-    <div className="cart__screen">
+    <div className="cart__screen ">
       <div className="row top">
         <div className="col-2">
           <img

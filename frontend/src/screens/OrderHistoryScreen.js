@@ -20,7 +20,7 @@ function OrderHistoryScreen(props) {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="page">
       <h1>Order History</h1>
       {loading ? (
         <LoadingBox></LoadingBox>
