@@ -13,8 +13,8 @@ import RegisterScreen from "./screens/RegisterScreen";
 import ShippingAddressScreen from "./screens/ShippingAddressScreen";
 import SigninScreen from "./screens/SigninScreen";
 import SearchIcon from "@material-ui/icons/Search";
-import RoomOutlinedIcon from "@material-ui/icons/RoomOutlined";
 import { HiOutlineShoppingCart } from "react-icons/hi";
+import { BiMap } from "react-icons/bi";
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -40,9 +40,9 @@ function App() {
             </Link>
 
             <Link to="/shipping" className="header__link">
-              <RoomOutlinedIcon fontSize="large" />
+              <BiMap size="1.7em"/>
               <div className="header_option">
-                <span className="header__optionLineOne ">
+                <span className="header__optionLineOne header__name">
                   {userInfo ? `Deliver to ${userInfo.name}` : "Hello "}
                 </span>
                 <span className="header__optionLineTwo">
