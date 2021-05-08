@@ -12,9 +12,10 @@ import ProductScreen from "./screens/ProductScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import ShippingAddressScreen from "./screens/ShippingAddressScreen";
 import SigninScreen from "./screens/SigninScreen";
-import SearchIcon from "@material-ui/icons/Search";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { BiMap } from "react-icons/bi";
+import SearchBox from "./component/SearchBox";
+import SearchScreen from "./screens/SearchScreen";
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -40,7 +41,7 @@ function App() {
             </Link>
 
             <Link to="/shipping" className="header__link">
-              <BiMap size="1.7em"/>
+              <BiMap size="1.7em" />
               <div className="header_option">
                 <span className="header__optionLineOne header__name">
                   {userInfo ? `Deliver to ${userInfo.name}` : "Hello "}
@@ -53,11 +54,14 @@ function App() {
               </div>
             </Link>
 
-            <div className="header__search">
-              <input type="text" className="header__searchInput" />
-              <SearchIcon fontSize="large" className="header__searchIcon" />
-            </div>
-                    
+            {/* <SearchBox /> */}
+
+            <Route
+              render={({ history }) => (
+                <SearchBox history={history}></SearchBox>
+              )}
+            ></Route>
+
             <div className="header__nav">
               <Link to={!userInfo && "/signin"} className="header__link">
                 <div onClick={signoutHandler} className="header_option">
@@ -83,12 +87,10 @@ function App() {
                     <span className="badge">{cartItems.length}</span>
                   </span>
                   <span className="cart__icon">
-                    <HiOutlineShoppingCart size="2.5em" />
+                    <HiOutlineShoppingCart size="4.2rem" />
                   </span>
                 </div>
-                <div className="header__cart">
-                  Cart
-                </div>
+                <div className="header__cart">Cart</div>
               </Link>
             </div>
           </nav>
@@ -103,9 +105,16 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/success" component={OrderSuccessScreen}></Route>
           <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
+          <Route
+            path="/search/name/:name?"
+            component={SearchScreen}
+            exact
+          ></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
-        <footer className="row center">All right reserved (Amazon Clone Using MERN Stack)</footer>
+        <footer className="row center">
+          All right reserved (Amazon Clone Using MERN Stack)
+        </footer>
       </div>
     </BrowserRouter>
   );

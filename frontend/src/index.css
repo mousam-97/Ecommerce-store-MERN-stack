@@ -26,7 +26,7 @@ body {
 
 @media only screen and (max-width: 485px) {
   html {
-    font-size: 20%;
+    font-size: 15%;
   }
 }
 
@@ -42,10 +42,10 @@ body {
   height: 100%;
 }
 
-header {
+/* header {
   grid-area: header;
   background-color: #131921;
-}
+} */
 
 main {
   grid-area: main;
@@ -138,24 +138,27 @@ footer {
 
 .header__search {
   display: flex;
+  flex-direction: row;
   flex: 1;
   align-items: center;
+  width: 100%;
 }
 
 .header__searchInput {
-  height: 1.2rem;
+  height: 1.9rem;
   padding: 1.5rem;
   border: none;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  width: 100%;
+  flex: 1 1 80rem;
 }
 
 .header__searchIcon {
   padding: 1rem;
   border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0;
   border-bottom-right-radius: 0.5rem;
-  height: 2.2rem !important;
+  border-bottom-left-radius: 0;
   background-color: #f0b240;
 }
 
@@ -577,4 +580,3 @@ table {
   background-color: #eee;
   border-radius: 50%;
 }
-
