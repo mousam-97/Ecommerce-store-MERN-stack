@@ -42,14 +42,9 @@ body {
   height: 100%;
 }
 
-/* header {
-  grid-area: header;
-  background-color: #131921;
-} */
 
 main {
   grid-area: main;
-  /* padding: 1rem; */
 }
 
 footer {
@@ -206,9 +201,6 @@ footer {
   margin: 3rem;
 }
 
-.productlist {
-  /* margin: 0 1rem; */
-}
 
 .product__description {
   padding: 1rem;
@@ -293,7 +285,6 @@ button.block {
 
 header a {
   color: #ffffff;
-  /* padding: 1rem; */
 }
 
 .store__logo {
@@ -302,11 +293,6 @@ header a {
   font-weight: 600;
 }
 
-/* a.brand {
-  color: #ffffff;
-  font-size: 3rem;
-  font-weight: bold;
-} */
 
 .badge {
   background-color: #131921;
@@ -347,9 +333,7 @@ header a {
 }
 
 /* Image */
-img {
-  /* border-radius: 0.5rem; */
-}
+
 
 img.small {
   max-width: 10rem;
