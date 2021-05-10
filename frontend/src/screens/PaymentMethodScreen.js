@@ -37,11 +37,7 @@ function PaymentMethodScreen(props) {
               className="checkmark"
             ></input>
             <label htmlFor="paypal">
-              <img
-                className="payment__logo"
-                src="/images/paypal-logo.png"
-                alt="paypal logo"
-              />
+              Paypal
             </label>
           </div>
         </div>
@@ -57,11 +53,7 @@ function PaymentMethodScreen(props) {
               className="checkmark"
             ></input>
             <label htmlFor="stripe">
-              <img
-                className="payment__logo"
-                src="/images/Stripe_logo.png"
-                alt="stripe logo"
-              />
+              Stripe
             </label>
           </div>
         </div>

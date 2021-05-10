@@ -31,11 +31,6 @@ function CartScreen(props) {
     <div className="cart__screen ">
       <div className="row top">
         <div className="col-2">
-          <img
-            className="cart__banner"
-            src="/images/amazon-credit-cardd-banner.png"
-            alt="cart-banner"
-          />
           <h1 className="cart__header">Your Shopping Basket</h1>
           {cartItems.length === 0 ? (
             <MessageBox>
@@ -45,12 +40,12 @@ function CartScreen(props) {
             <ul>
               {cartItems.map((item) => (
                 <li key={item.product}>
-                  <div className="row">
+                  <div className="row cart__item">
                     <div>
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="small"
+                        className="medium"
                       ></img>
                     </div>
                     <div className="min-30">
@@ -100,7 +95,7 @@ function CartScreen(props) {
               </li>
               <li>
                 <p className="subtotal__gift">
-                  <input type="checkbox" />
+                  <input type="checkbox" className="cart__checkbox" />
                   This order contains a gift
                 </p>
               </li>

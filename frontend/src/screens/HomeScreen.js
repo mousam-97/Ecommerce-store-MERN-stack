@@ -29,6 +29,7 @@ function HomeScreen() {
           <div className="carousal__banner">
             <CarouselScreen />
           </div>
+
           {products.map((product) => {
             return (
               <Product

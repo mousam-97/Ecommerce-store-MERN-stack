@@ -32,13 +32,11 @@ function App() {
       <div className="grid-container">
         <header>
           <nav className="header">
-            <Link to="/">
-              <img
-                className="header__logo"
-                src="/images/amazonLogo.png"
-                alt="amazon-logo"
-              />
-            </Link>
+            <div>
+              <Link to="/">
+                <h1 className="store__logo">amazona</h1>
+              </Link>
+            </div>
 
             <Link to="/shipping" className="header__link">
               <BiMap size="1.7em" />
@@ -113,7 +111,7 @@ function App() {
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center">
-          All right reserved (Amazon Clone Using MERN Stack)
+          All right reserved
         </footer>
       </div>
     </BrowserRouter>

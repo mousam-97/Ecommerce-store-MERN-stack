@@ -20,14 +20,14 @@ function OrderSuccessScreen(props) {
         </h1>
         <label />
         <p>
-          Thank you for shopping with us. We'd like to let you know that Fake
-          Amazon Clone has confirmed your order, and is preparing it for
-          shipment. If you would like to view the status of your order or make
-          any changes to it, please visit{" "}
+          Thank you for shopping with us. We'd like to let you know that Amazona
+          Clone has confirmed your order, and is preparing it for shipment. If
+          you would like to view the status of your order or make any changes to
+          it, please visit{" "}
           <strong>
             <Link to="orderhistory">Your Orders</Link>
           </strong>{" "}
-          on Amazon.
+          on Amazona.
         </p>
         <button
           className="primary block"

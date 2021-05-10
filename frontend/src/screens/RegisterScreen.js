@@ -37,11 +37,9 @@ function RegisterScreen(props) {
   return (
     <div className="login">
       <Link to="/">
-        <img
-          className="login__logo"
-          src="/images/amazonLogo2.jpg"
-          alt="amazon-logo"
-        />
+        <div className="login__logo">
+          <h1 className="store__logo">amazona</h1>
+        </div>
       </Link>
       <div className="login__container">
         <form className="form" onSubmit={submitHandler}>
@@ -51,7 +49,9 @@ function RegisterScreen(props) {
           {loading && <LoadingBox></LoadingBox>}
           {error && <MessageBox variant="danger">{error}</MessageBox>}
           <div>
-            <label htmlFor="name"><strong>Name</strong></label>
+            <label htmlFor="name">
+              <strong>Name</strong>
+            </label>
             <input
               type="text"
               id="name"
@@ -61,7 +61,9 @@ function RegisterScreen(props) {
             ></input>
           </div>
           <div>
-            <label htmlFor="email"><strong>Email address</strong></label>
+            <label htmlFor="email">
+              <strong>Email address</strong>
+            </label>
             <input
               type="email"
               id="email"
@@ -71,7 +73,9 @@ function RegisterScreen(props) {
             ></input>
           </div>
           <div>
-            <label htmlFor="password"><strong>Password</strong></label>
+            <label htmlFor="password">
+              <strong>Password</strong>
+            </label>
             <input
               type="password"
               id="password"
@@ -81,7 +85,9 @@ function RegisterScreen(props) {
             ></input>
           </div>
           <div>
-            <label htmlFor="confirmPassword"><strong>Confirm Password</strong></label>
+            <label htmlFor="confirmPassword">
+              <strong>Confirm Password</strong>
+            </label>
             <input
               type="password"
               id="confirmPassword"
@@ -100,7 +106,9 @@ function RegisterScreen(props) {
             <label />
             <div>
               Already have an account?{" "}
-              <Link to={`/signin?redirect=${redirect}`}><strong>Sign-In</strong></Link>
+              <Link to={`/signin?redirect=${redirect}`}>
+                <strong>Sign-In</strong>
+              </Link>
             </div>
           </div>
         </form>

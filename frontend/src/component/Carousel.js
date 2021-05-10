@@ -18,22 +18,15 @@ function CarouselScreen() {
         <div>
           <img
             className="home__image"
-            src="/images/Amazon_banner.jpg"
-            alt="amazon-prime-banner"
+            src="/images/banner1.jpg"
+            alt="banner1"
           />
         </div>
         <div>
           <img
             className="home__image"
             src="/images/banner2.jpg"
-            alt="amazon-prime-banner"
-          />
-        </div>
-        <div>
-          <img
-            className="home__image"
-            src="/images/banner3.jpg"
-            alt="amazon-prime-banner"
+            alt="banner2"
           />
         </div>
       </Carousel>
