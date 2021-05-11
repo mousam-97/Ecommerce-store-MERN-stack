@@ -590,7 +590,7 @@ table {
 
 @media only screen and (max-width: 770px) {
   html {
-    font-size: 40%;
+    font-size: 35%;
   }
   .grid-container {
     grid-template-rows: 15rem 1fr 8rem;
@@ -613,10 +613,14 @@ table {
   img.medium {
     max-width: 10rem;
   }
+  .product__card {
+    height: 52rem;
+    margin: 1rem;
+  }
 }
 
 @media only screen and (max-width: 485px) {
   html {
-    font-size: 30%;
+    font-size: 25%;
   }
 }
