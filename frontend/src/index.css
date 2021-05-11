@@ -34,7 +34,8 @@ main {
 
 footer {
   grid-area: footer;
-  background-color: #203040;
+  /* background-color: #203040; */
+  background-color: #131921;
   color: #ffff;
 }
 
@@ -592,21 +593,22 @@ table {
     font-size: 40%;
   }
   .grid-container {
-    grid-template-rows: 14rem 1fr 8rem;
+    grid-template-rows: 15rem 1fr 8rem;
     height: 100%;
   }
   .browser__search {
     display: none;
   }
   .carousal__banner {
-    margin-bottom: 5rem;
+    margin-bottom: 1.5rem;
   }
   .home__image {
     mask-image: none;
-    height: 50rem;
+    height: 40rem;
   }
   .header__mobile {
     display: flex;
+    align-items: center;
   }
   img.medium {
     max-width: 10rem;
