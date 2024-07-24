@@ -1,0 +1,30 @@
+{
+	"name": "amazon",
+	"type": "module",
+	"version": "1.0.0",
+	"description": "MERN Stack Amazon Clone",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon --watch backend --exec node --experimental-modules server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mousam-97/amazon-clone-MERN-stack.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/mousam-97/amazon-clone-MERN-stack/issues"
+	},
+	"homepage": "https://github.com/mousam-97/amazon-clone-MERN-stack#readme",
+	"dependencies": {
+		"bcrypt": "^5.0.1",
+		"bcryptjs": "^2.4.3",
+		"body-parser": "^1.19.0",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"express-async-handler": "^1.1.4",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.12.5"
+	}
+}
