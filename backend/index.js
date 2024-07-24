@@ -5,22 +5,30 @@ import path from "path";
 import userRouter from "./routers/userRouter.js";
 import productRouter from "./routers/productRouter.js";
 import orderRouter from "./routers/orderRouter.js";
+import cors from "cors";
 
 dotenv.config();
 
 const app = express();
+app.use(
+	cors({
+		origin: ["http://localhost:3000"],
+		methods: ["POST", "GET"],
+		credentials: true,
+	})
+);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 mongoose
-  .connect(process.env.MONGODB_URL || "mongodb://localhost/amazona", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  })
-  .then(() => console.log("MongoDB connection established..."))
-  .catch((error) => console.error("MongoDB connection failed:", error.message));
+	.connect(process.env.MONGODB_URL || "mongodb://localhost/amazona", {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+		useCreateIndex: true,
+	})
+	.then(() => console.log("MongoDB connection established..."))
+	.catch((error) => console.error("MongoDB connection failed:", error.message));
 
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
@@ -45,11 +53,11 @@ app.get("/", (req, res) => {
 });
 
 app.use((err, req, res, next) => {
-  res.status(500).send({ message: err.message });
+	res.status(500).send({ message: err.message });
 });
 
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
-  console.log(`Server is running on port:${port}`);
+	console.log(`Server is running on port:${port}`);
 });
