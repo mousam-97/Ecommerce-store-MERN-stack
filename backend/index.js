@@ -12,7 +12,8 @@ dotenv.config();
 const app = express();
 app.use(
 	cors({
-		origin: [process.env.APP_URL, process.env.APP_URL__LOCAL],
+		// origin: [process.env.APP_URL, process.env.APP_URL__LOCAL],
+		origin: true,
 		methods: ["POST", "GET"],
 		credentials: true,
 	})
@@ -59,5 +60,7 @@ app.use((err, req, res, next) => {
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
+	console.log("process.env.APP_URL", process.env.APP_URL);
+
 	console.log(`Server is running on port:${port}`);
 });
