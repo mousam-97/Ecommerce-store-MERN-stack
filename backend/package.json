@@ -5,7 +5,7 @@
 	"description": "MERN Stack Amazon Clone",
 	"main": "index.js",
 	"scripts": {
-		"start": "nodemon --watch backend --exec node --experimental-modules server.js"
+		"start": "nodemon --watch backend --exec node --experimental-modules index.js"
 	},
 	"repository": {
 		"type": "git",
